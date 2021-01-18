@@ -35,9 +35,7 @@ public class StackTests {
         for (ClassicCard card : cards) {
             stack.push(card);
         }
-
         stack.setLocation(10, 10);
-
     }
 
     @Test

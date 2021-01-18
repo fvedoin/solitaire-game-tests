@@ -1,49 +1,35 @@
-package card;
+package solitaire;
 
+import com.fbergeron.card.Card;
 import com.fbergeron.card.ClassicCard;
 import com.fbergeron.card.Suit;
 import com.fbergeron.card.Value;
+import com.fbergeron.solitaire.SequentialStack;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.*;
 
-import java.awt.*;
 import java.util.Arrays;
 import java.util.Collection;
+import java.util.Locale;
 
 import static org.junit.Assert.*;
 
 @RunWith(Parameterized.class)
-public class InstanceClassicCardTests {
+public class SequentialStackCardTests {
     @Parameter(0)
     public Value value;
     @Parameter(1)
     public Suit suit;
 
     @Test
-    public void getValue_Success() {
-        ClassicCard classicCard = new ClassicCard(value, suit);
-        Value result = classicCard.getValue();
-        assertEquals(value, result);
-    }
-
-    @Test
-    public void getSuit_Success() {
-        ClassicCard classicCard = new ClassicCard(value, suit);
-        Suit result = classicCard.getSuit();
-        assertEquals(suit, result);
-    }
-
-    @Test
-    public void getColor_Success() {
-        ClassicCard classicCard = new ClassicCard(value, suit);
-        Color result = classicCard.getColor();
-        if (suit == Suit.SPADE || suit == Suit.CLUB) {
-            assertEquals(Color.black, result);
-        } else {
-            assertEquals(Color.red, result);
-        }
+    public void isCardValid_Success(){
+        SequentialStack sequentialStack = new SequentialStack();
+        Card card = new ClassicCard(value, suit);
+        boolean result = sequentialStack.isValid(card);
+        assertTrue(result);
     }
 
     @Parameters(name = "{0} | {1}")
