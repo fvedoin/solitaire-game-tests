@@ -22,12 +22,6 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- Dependencia para usar arquivos CSV como massa de dados -->
-        <dependency>
-            <groupId>pl.pragmatists</groupId>
-            <artifactId>JUnitParams</artifactId>
-            <version>${junit.params.version}</version>
-        </dependency>
     </dependencies>
 
     <!--  Par execucao dos testes via POM ou linha de comando pelo Manven -->

@@ -8,7 +8,8 @@ import org.junit.runners.Suite.SuiteClasses;
 @SuiteClasses({
         BasicCardTests.class,
         FlipCardTests.class,
-        LocationCardTests.class
+        LocationCardTests.class,
+        InstanceClassicCardTests.class
 })
 public class CardSuiteTests {
 }

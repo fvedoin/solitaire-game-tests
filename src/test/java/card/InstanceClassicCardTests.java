@@ -14,6 +14,7 @@ import java.util.Collection;
 
 import static org.junit.Assert.*;
 
+//Data Driven Test
 @RunWith(Parameterized.class)
 public class InstanceClassicCardTests {
     @Parameter(0)

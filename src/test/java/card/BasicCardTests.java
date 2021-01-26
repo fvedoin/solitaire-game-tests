@@ -43,7 +43,7 @@ public class BasicCardTests {
     }
 
     @Test
-    public void testContains() {
+    public void pointContains_Success() {
         ClassicCard classicCard = new ClassicCard(Value.V_1, Suit.DIAMOND);
         classicCard.setLocation(20, 30);
         Boolean result = classicCard.contains(classicCard.getLocation());
